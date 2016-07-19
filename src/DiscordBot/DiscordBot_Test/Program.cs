@@ -106,6 +106,25 @@ namespace DiscordBot_Test
                     Console.WriteLine("Finished finding price");
                 });
 
+            //Fetches Araxxor Rotation
+            client.GetService<CommandService>().CreateCommand("araxxor") //create command price
+                .Alias(new string[] { "araxxor", "araxxi" }) //add 2 aliases
+                .Description("Finds the paths open.") //adds description, it will be shown when ~help is used
+                .Parameter("None", ParameterType.Optional) //takes in the item we wish to price check
+                .Do(async e =>
+                {
+                    Console.WriteLine($"Finding Paths for Araxxor");
+                    string one = "C:\\Users\\God\\AppData\\Local\\Enthought\\Canopy\\User\\Scripts\\python.exe";
+                    string two = "getPaths.py";
+                    run_cmd(one, two);
+                    string path1 = System.IO.File.ReadAllText("path1.txt");
+                    string path2 = System.IO.File.ReadAllText("path2.txt");
+                    string path3 = System.IO.File.ReadAllText("path3.txt");
+
+                    await e.Channel.SendMessage($"|Path 1: {path1}|  |Path 2: {path2}|  |Path 3: {path3}|");//sends a message to channel with the given text
+                    Console.WriteLine("Finished finding paths");
+                });
+
             //logs all messages in the console
             client.Log.Message += (s, e) => Console.WriteLine($"[{e.Severity}] {e.Source}: {e.Message}");
             //--------------------------------------------------------------------------------------------------

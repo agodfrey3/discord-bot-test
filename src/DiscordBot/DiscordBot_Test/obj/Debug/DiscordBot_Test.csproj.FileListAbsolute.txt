@@ -18,3 +18,5 @@ C:\Users\God\Documents\Dev\src\DiscordBot\DiscordBot_Test\bin\Debug\Nito.AsyncEx
 C:\Users\God\Documents\Dev\src\DiscordBot\DiscordBot_Test\bin\Debug\RestSharp.xml
 C:\Users\God\Documents\Dev\src\DiscordBot\DiscordBot_Test\obj\Debug\DiscordBot_Test.exe
 C:\Users\God\Documents\Dev\src\DiscordBot\DiscordBot_Test\obj\Debug\DiscordBot_Test.pdb
+C:\Users\God\Documents\Dev\src\DiscordBot\DiscordBot_Test\bin\Debug\getPaths.py
+C:\Users\God\Documents\Dev\src\DiscordBot\DiscordBot_Test\obj\Debug\DiscordBot_Test.csprojResolveAssemblyReference.cache

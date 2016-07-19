@@ -87,6 +87,9 @@
     <Content Include="getClanSize.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="getPaths.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="getPrice.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
