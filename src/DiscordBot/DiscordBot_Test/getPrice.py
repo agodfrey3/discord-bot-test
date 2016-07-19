@@ -20,8 +20,14 @@ def getPrice():
 
     pattern = re.compile(regex)
 
+    i = 0
+
+
     for match in re.findall(pattern, htmltext):
-        f.write(match)
+        if(match):
+            if(i == 0):
+                i = i + 1            
+                f.write(match)
         
     f.close()
     
