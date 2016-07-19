@@ -5,11 +5,11 @@ import re
 def getSize():
     f = open('clanSize.txt', 'w')
     
-    htmlfile = urllib.urlopen("http://services.runescape.com/m=clan-home/clan/The%20paradigm%20shift")
+    htmlfile = urllib.urlopen("http://www.runeclan.com/clan/The_paradigm_shift")
     
     htmltext = htmlfile.read()
     
-    regex = '<span class="clanstatTitle">Total Members:</span><span class="clanstatVal FlatHeader">(.+?)</span>'
+    regex = '</div><span class="clan_subtext">Clan Members:</span>(.+?)<br />'
 
     pattern = re.compile(regex)
 
