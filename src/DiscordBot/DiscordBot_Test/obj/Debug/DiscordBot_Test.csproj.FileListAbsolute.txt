@@ -20,3 +20,5 @@ C:\Users\God\Documents\Dev\src\DiscordBot\DiscordBot_Test\obj\Debug\DiscordBot_T
 C:\Users\God\Documents\Dev\src\DiscordBot\DiscordBot_Test\obj\Debug\DiscordBot_Test.pdb
 C:\Users\God\Documents\Dev\src\DiscordBot\DiscordBot_Test\bin\Debug\getPaths.py
 C:\Users\God\Documents\Dev\src\DiscordBot\DiscordBot_Test\obj\Debug\DiscordBot_Test.csprojResolveAssemblyReference.cache
+C:\Users\God\Documents\Dev\src\DiscordBot\DiscordBot_Test\bin\Debug\Discord.Net.Audio.dll
+C:\Users\God\Documents\Dev\src\DiscordBot\DiscordBot_Test\bin\Debug\hello.mp3
