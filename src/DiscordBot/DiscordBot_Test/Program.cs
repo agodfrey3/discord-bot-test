@@ -110,7 +110,7 @@ namespace DiscordBot_Test
             client.GetService<CommandService>().CreateCommand("araxxor") //create command price
                 .Alias(new string[] { "araxxor", "araxxi" }) //add 2 aliases
                 .Description("Finds the paths open.") //adds description, it will be shown when ~help is used
-                .Parameter("None", ParameterType.Optional) //takes in the item we wish to price check
+                .Parameter("None", ParameterType.Optional) //no param
                 .Do(async e =>
                 {
                     Console.WriteLine($"Finding Paths for Araxxor");
@@ -125,23 +125,39 @@ namespace DiscordBot_Test
                     Console.WriteLine("Finished finding paths");
                 });
 
-            //HELLO
-            client.GetService<CommandService>().CreateCommand("hello") //create command hello
-                .Alias(new string[] { "hello", "noobs" }) //add 2 aliases
-                .Description("Hello....") //adds description, it will be shown when ~help is used
-                .Parameter("None", ParameterType.Optional) //takes in the item we wish to price check
+            //Warband Countdown
+            client.GetService<CommandService>().CreateCommand("warbands") //create command TimeUntilWarBand
+                .Alias(new string[] { "warbands", "wb" }) //add 2 aliases
+                .Description("Countdown until the next wilderness warband.") //adds description, it will be shown when ~help is used
+                .Parameter("None", ParameterType.Optional) //no param
                 .Do(async e =>
                 {
-                    Console.WriteLine($"Saying Hello");
-                    await e.Channel.SendFile("hello.mp3");//sends a file
-                    Console.WriteLine("Finished finding paths");
+                    Console.WriteLine($"Fetching warband countdown.");
+                    string one = "C:\\Users\\God\\AppData\\Local\\Enthought\\Canopy\\User\\Scripts\\python.exe";
+                    string two = "warbands.py";
+                    //run_cmd(one, two);
+                    string TTWB = System.IO.File.ReadAllText("warbandTimer.txt");
+                    await e.Channel.SendMessage($"Time until next warband: (Function will be available in the next update){TTWB}");
+                    Console.WriteLine("Found warband countdown.");
                 });
-            
+
+            //Vorago
+            client.GetService<CommandService>().CreateCommand("vorago") //create command 
+                .Alias(new string[] { "vorago", "rago" }) //add 2 aliases
+                .Description("Tells the rotation of Vorago.") //adds description, it will be shown when ~help is used
+                .Parameter("None", ParameterType.Optional) //no param
+                .Do(async e =>
+                {
+                    Console.WriteLine($"Fetching warband countdown.");
+                    await e.Channel.SendMessage($"Current Vorago Rotation: (Function will be available in the next update)");
+                    Console.WriteLine("Found warband countdown.");
+                });
+
             //TTS
             client.GetService<CommandService>().CreateCommand("TextToSpeech") //create command hello
                 .Alias(new string[] { "tts", "say" }) //add 2 aliases
                 .Description("Reads out a message") //adds description, it will be shown when ~help is used
-                .Parameter("Message", ParameterType.Unparsed) //takes in the item we wish to price check
+                .Parameter("Message", ParameterType.Unparsed) //takes in text to say as arg
                 .Do(async e =>
                 {
                     Console.WriteLine($"Performing text to speech with line: {e.GetArg("Message")}");
