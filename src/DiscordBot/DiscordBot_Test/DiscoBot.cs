@@ -17,7 +17,7 @@ namespace DiscordBot_Test
 
             bot.ExecuteAndWait(async() =>
             {
-                await bot.Connect("ParadigmShiftBot", "Cutter35");
+                await bot.Connect("ParadigmShiftBot", "XXXXX");
             });
         }
     }
